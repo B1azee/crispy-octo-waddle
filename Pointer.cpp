@@ -4,24 +4,24 @@ using namespace std;
 
 void plus1 (int *pa)
 {
-    (*pa)++; // прибавляем 1 к переменной по оределённому адресу
+ (*pa)++; / / adding 1 to the variable by the allocated pointer
 }
 
 int main()
 {
-    int a = 4;
-    int *pa = &a; // создаём указатель; присваиваем ему адрес переменной a
-    cout << " address a : " << pa << endl;
-    cout << " a = " << a << endl;
-    cout << " a = " << *pa << endl;
-    cout << " ================================== " << endl;
+ int a = 4;
+ int *pa = &a; / / creating a pointer; assigning it the address of the variable " a"
+ cout << "address a :" << pa << endl;
+ cout << "a =" << a << endl;
+ cout << "a =" << *pa << endl; // writing the variable "a" through the pointer
+ cout << "================================== " << endl;
 
-    plus1(pa); // передаём указатель в функцию
+ plus1(pa); / / passing the pointer to the function
 
-    cout << " a = " << a << endl;
-    cout << " ================================== " << endl;
+ cout << "a =" << a << endl;
+ cout << "================================== " << endl;
 
-    plus1(&a);
+ plus1(&a);// passing the address of the variable to the function
 
-    cout << " a = " << a << endl;
+ cout << "a =" << a << endl;
 }
